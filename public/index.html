@@ -12,8 +12,19 @@
     </head>
     <body ng-controller="FotosController">
         <div class="container">
-          <h1 class="text-center">Alurapic</h1>
-          <img class="img-responsive center-block"  ng-src="{{foto.url}}" alt="{{foto.titulo}}">
-        </div> <!-- fim container -->        
+          <div class="jumbotron">
+            <h1 class="text-center">Alurapic</h1>
+          </div>
+          <div class="col-md-2" ng-repeat="foto in fotos">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title text-center">{{foto.titulo}}</h3>
+              </div><!-- fim panel-heading -->
+              <div class="panel-body">
+                <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
+              </div><!-- fim panel-body -->
+            </div><!-- fim panel panel-default -->
+          </div><!-- fim col-md-2 -->
+        </div> <!-- fim container -->
     </body>
 </html>
