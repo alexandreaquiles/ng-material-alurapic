@@ -3,9 +3,19 @@ angular.module('minhasDiretivas', [])
     var ddo = {}
     ddo.restrict = 'AE';
     ddo.scope = {
-       titulo: '@titulo'
+      titulo: '@titulo'
     };
     ddo.templateUrl = 'js/directives/meu-painel.html';
     ddo.transclude = true;
+    return ddo;
+  })
+  .directive('minhaFoto', function(){
+    var ddo = {}
+    ddo.restrict = 'AE';
+    ddo.scope = {
+      titulo: '@titulo',
+      url: '@url'
+    };
+    ddo.templateUrl = 'js/directives/minha-foto.html';
     return ddo;
   });

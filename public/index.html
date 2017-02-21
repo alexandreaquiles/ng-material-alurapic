@@ -17,7 +17,7 @@
             <h1 class="text-center">Alurapic</h1>
           </div>
           <meu-painel titulo="{{foto.titulo}}" ng-repeat="foto in fotos">
-              <img class="img-responsive center-block" ng-src="{{foto.url}}" alt="{{foto.titulo}}">
+            <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
           </meu-painel>
         </div> <!-- fim container -->
     </body>
