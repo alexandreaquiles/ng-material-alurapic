@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <script src="js/lib/angular.min.js"></script>
+        <script src="js/directives/minhas-diretivas.js"></script>
         <script src="js/main.js"></script>
         <script src="js/controllers/fotos-controller.js"></script>
     </head>
@@ -15,16 +16,9 @@
           <div class="jumbotron">
             <h1 class="text-center">Alurapic</h1>
           </div>
-          <div class="col-md-2" ng-repeat="foto in fotos">
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title text-center">{{foto.titulo}}</h3>
-              </div><!-- fim panel-heading -->
-              <div class="panel-body">
-                <img class="img-responsive center-block" src="{{foto.url}}" alt="{{foto.titulo}}">
-              </div><!-- fim panel-body -->
-            </div><!-- fim panel panel-default -->
-          </div><!-- fim col-md-2 -->
+          <meu-painel titulo="{{foto.titulo}}" ng-repeat="foto in fotos">
+              <img class="img-responsive center-block" ng-src="{{foto.url}}" alt="{{foto.titulo}}">
+          </meu-painel>
         </div> <!-- fim container -->
     </body>
 </html>
