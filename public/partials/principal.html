@@ -17,6 +17,10 @@
     </form>
   </div> <!-- fim col-md-12 -->
 </div> <!-- fim row -->
-<meu-painel class="col-md-2 painel-animado" titulo="{{foto.titulo}}" ng-repeat="foto in fotos | filter: {titulo: filtro}">
-  <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
-</meu-painel>
+<div ng-repeat="foto in fotos | filter: {titulo: filtro}">
+  <div ng-class="{'clearfix': $index%6 === 0}"></div>
+  <meu-painel class="col-md-2 painel-animado" titulo="{{foto.titulo}}">
+    <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+  </meu-painel>
+</div>
+
