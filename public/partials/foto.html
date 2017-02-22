@@ -12,7 +12,7 @@
       <span ng-show = "formulario.$submitted && formulario.titulo.$error.required" class="form-control alert-danger">
         Título obrigatório
       </span>
-      <span ng-show="formulario.$submitted && formulario.titulo.$error.maxlength" class="form-control alert-danger">
+      <span ng-show="formulario.$dirty && formulario.titulo.$error.maxlength" class="form-control alert-danger">
         No máximo 20 caracteres!
       </span>
     </div>
@@ -28,7 +28,7 @@
       <textarea name="descricao" class="form-control" ng-model="foto.descricao">
       </textarea>
     </div>
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid">
       Salvar
     </button>
     <a href="/" class="btn btn-default">Voltar</a>
