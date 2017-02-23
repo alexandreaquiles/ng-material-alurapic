@@ -12,7 +12,6 @@ angular.module('alurapic').controller('FotoController', function($scope, recurso
       cadastroDeFotos.cadastrar($scope.foto)
       .then(function(dados) {
         $scope.mensagem = dados.mensagem;
-        $scope.focado = true;
         if (dados.inclusao) {
           $scope.foto = {};
           $scope.formulario.$setPristine();
