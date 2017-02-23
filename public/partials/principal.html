@@ -24,6 +24,7 @@
   <div ng-class="{'clearfix': $index%6 === 0}"></div>
   <meu-painel class="col-md-2 painel-animado" titulo="{{foto.titulo}}">
     <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+    <a class="btn btn-primary btn-block" href="/fotos/edit/{{foto._id}}">Editar</a>
     <button class="btn btn-danger btn-block" ng-click="remover(foto)">Remover</button>
   </meu-painel>
 </div>
