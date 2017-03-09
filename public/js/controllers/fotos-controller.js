@@ -1,6 +1,10 @@
 angular
   .module('alurapic')
-  .controller('FotosController', function($scope, recursoFoto) {
+  .controller('FotosController', function($scope, recursoFoto, $mdMedia) {
+    $scope.$watch(function() { return $mdMedia('gt-xs'); }, function(fazWrap) {
+      $scope.fazWrap= fazWrap;
+    });
+
     recursoFoto.query(function(fotos) {
         $scope.fotos = fotos;
       }, function(erro) {
