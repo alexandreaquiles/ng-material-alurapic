@@ -1,4 +1,4 @@
-angular.module('alurapic', ['ngRoute', 'meusServicos', 'ngMaterial'])
+angular.module('alurapic', ['ngRoute', 'meusServicos', 'ngMaterial', 'ngMessages'])
   .config(function($routeProvider, $locationProvider, $mdIconProvider) {
 
     $mdIconProvider

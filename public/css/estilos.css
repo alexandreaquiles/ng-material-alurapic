@@ -28,3 +28,6 @@ md-card md-icon:hover svg {
 .md-button.md-fab.fixed-fab {
   position: fixed;
 }
+md-toast {
+  position: fixed;
+}
